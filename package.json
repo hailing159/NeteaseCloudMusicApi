@@ -43,7 +43,8 @@
     "music-metadata": "^7.5.3",
     "pac-proxy-agent": "^4.0.0",
     "qrcode": "^1.4.4",
-    "tunnel": "^0.0.6"
+    "tunnel": "^0.0.6",
+    "serverless-http": "^2.8.0"
   },
   "devDependencies": {
     "@types/node": "14.14.19",
