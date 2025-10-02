@@ -107,11 +107,12 @@ fs.readdirSync(path.join(__dirname, 'module'))
     })
   })
 
-const port = process.env.PORT || 3000
-const host = process.env.HOST || ''
+const port = process.env.PORT || 3000;
 
-app.server = app.listen(port, host, () => {
-  console.log(`server running @ http://${host ? host : 'localhost'}:${port}`)
-})
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`App listening on port ${port}`);
+  });
+}
 
-module.exports = app
+module.exports = app;
