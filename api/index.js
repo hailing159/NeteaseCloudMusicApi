@@ -1,5 +1,6 @@
+const { createServer } = require('http')
+const app = require('../app')  
 
-const serverless = require('serverless-http');
-const app = require('../app'); // 引入你刚才修改并导出的 express app
-
-module.exports = serverless(app);
+module.exports = (req, res) => {
+  createServer(app.callback()).emit('request', req, res)
+}
